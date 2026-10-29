@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Minimalista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Encabezado fijo con backdrop blur -->
+  <header class="header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">PROYECTO</span>
+        <h1 class="logo">Catálogo</h1>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#destacados" class="nav-link">Destacados</a>
+        <a href="#novedades" class="nav-link">Novedades</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-trigger" id="cartBtn" aria-label="Ver carrito">
+          <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="main-content">
+    <section class="catalog-section">
+      <div class="catalog-intro">
+        <h2>Colección Esencial</h2>
+        <p>Líneas puras, diseño depurado y funcionalidad en cada detalle.</p>
+      </div>
+
+      <!-- Cuadrícula responsiva (2 a 4 columnas) -->
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+  </main>
+
+  <!-- Notificación Toast -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
